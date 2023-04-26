@@ -1,15 +1,21 @@
 body {
-    /* margin:85px; */
-    padding: 50px 100px;
+background-color:lightskyblue;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    padding: 40px 60px;
+    margin:40px
 }
 
 h1 {
-    /* text-align: center; */
+    text-align: center;
     text-shadow: 0 4px 10px rgb(29, 85, 141);
 }
 
 #text {
+   
     width: 100%;
     padding: 20px;
     font-size: 20px;
@@ -17,38 +23,102 @@ h1 {
     border: 3px solid rgb(29, 85, 141);
 
 }
-.p{
-font-size: 20px;
-font-weight: bold;
-text-shadow:  0 4px 10px rgb(29, 85, 141);
+
+.p {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 4px 10px rgb(29, 85, 141);
 }
 
-.btn{
+.btn {
+
     width: 30px;
     height: 30px;
     display: inline-block;
     border-radius: 50%;
-    border:2px solid grey;
+    border: 2px solid grey;
     cursor: pointer;
-      
+
 }
 
-#color-switcher{
+#color-switcher {
+    margin: 25px 25px 0 0;
     text-align: right;
 }
 
-#RosyBrown{
-background-color: #BC8F8F;
+#RosyBrown {
+    background-color: #BC8F8F;
 }
 
-#teal{
-background-color: #008080;
+#teal {
+    background-color: #008080;
 }
 
-#MediumSeaGreen{
-background-color: MediumSeaGreen;
+#MediumSeaGreen {
+    background-color: MediumSeaGreen;
 }
 
-#IndianRed{
-background-color:#CD5C5C;
+#IndianRed {
+    background-color: #CD5C5C;
+}
+
+.img {
+    margin: 2px 0 0 0;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 0 20px 0;
+}
+
+#navbar {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.926);
+    list-style-type: none;
+    text-align: center;
+    background-color: black;
+}
+
+#navbar li {
+    cursor: pointer;
+    color: white;
+    padding: 15px 10px;
+    display: inline-block;
+    /* margin: 0 60px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.about {
+    font-size: 19px;
+    background-color: darkslategrey;
+    height: auto;
+}
+
+.feature {
+    margin-top: 25px;
+    font-size: 19px;
+
+
+
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.5s;
+    color: lightskyblue;
+    font-size: 20px;
 }

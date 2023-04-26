@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,51 +8,147 @@
     <title>Word counter</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+    <div class="img">
+        <img src="./img/Phoenix Mascot Logo.png" alt="" class="logo">
+    </div>
+    <nav id="navbar">
+        <li><a href="">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#feature">Features</a></li>
+    </nav>
     <div id="color-switcher">
-        <span class="btn" id="RosyBrown" onclick="changeBG('#BC8F8F')"></span> 
+        <span class="btn" id="RosyBrown" onclick="changeBG('#BC8F8F')"></span>
         <span class="btn" id="teal" onclick="changeBG('#008080')"></span>
         <span class="btn" id="MediumSeaGreen" onclick="changeBG('MediumSeaGreen')"></span>
         <span class="btn" id="IndianRed" onclick="changeBG('#CD5C5C')"></span>
     </div>
-    <h1 id="h">Word Counter</h1>
-    <textarea name="word-counter" id="text" cols="50" rows="10"></textarea>
-    <p class="p">
-        <span id="word">0</span>&nbspwords 
-        and
-        <span id="char">0</span>&nbspcharacters
-    </p>
-    <script>  
-        let text=document.getElementById("text");
+    <div class="container">
+        <h1 id="h">Word Counter</h1>
+        <textarea name="word-counter" id="text" cols="50" rows="10"></textarea>
+        <p class="p">
+            <span id="word">0</span>&nbspwords
+            and
+            <span id="char">0</span>&nbspcharacters
+        </p>
+    </div>
+    <div class="container about" id="about">
+        <h1>ABOUT US</h1>
+        <p>Welcome to our comprehensive text manipulation website! Our platform is designed to provide you with a suite
+            of powerful tools that can help you to optimize your writing and editing processes, and take your work to
+            the next level.<br><br>
 
-        text.addEventListener('input',function(){
-            var t=this.value;
-            let char=t.length;
-           document.getElementById("char").innerHTML=char;
-        
-        //    remove extra space from starting and ending
-           t=t.trim();
+            Our website includes a variety of features that allow you to manipulate text in a wide range of ways.
+            Whether you need to count words, characters, or syllables, our tools make it easy for you to do so quickly
+            and accurately. If you're looking to capitalize or lowercase specific words, or even reverse or randomize
+            the order of your text, our website has you covered.<br><br>
 
-           //split into array when space comes
-           let words=t.split(' ');
+            But that's just the beginning! We also offer a range of advanced text manipulation tools that allow you to
+            remove duplicates, split your text into separate parts, and even replace specific words or phrases with
+            others. With these tools at your fingertips, you'll be able to quickly and easily fine-tune your writing to
+            achieve the exact style and tone you're looking for.<br><br>
 
-           //cleanlist when element not empty in between 
-           let cleanList=words.filter(function(elem){
-           return elem!="";
-           })
+            Our website is designed to be user-friendly and intuitive, with a simple interface that allows you to access
+            our tools quickly and easily. Whether you're a professional writer, a student, or simply someone who wants
+            to improve their writing skills, our platform is the perfect solution for all your text manipulation
+            needs.<br><br>
 
-           document.getElementById("word").innerHTML=cleanList.length;
+            We're committed to providing you with the highest quality tools and services, and we're always looking for
+            ways to improve and expand our platform. If you have any feedback or suggestions for new features, please
+            don't hesitate to let us know - we're always happy to hear from our users.<br><br>
+
+            Thank you for choosing our website for all your text manipulation needs. We hope that our tools will help
+            you to achieve your writing goals and take your work to the next level!</p>
+    </div>
+    <div class="feature container" id="feature">
+        <h1>FEATURES</h1>
+        <p>
+        <ol>
+            <li>
+                <b>Word counter:</b> A tool that allows users to quickly and easily count the number of words in their text.<br><br>
+            </li>
+            <li>
+                <b>Character counter:</b> A tool that allows users to count the number of characters in their text.<br><br>
+            </li>
+            <li>
+                <b>Syllable counter:</b> A tool that allows users to count the number of syllables in their text.<br><br>
+            </li>
+            <li>
+                <b>Word changer:</b> Tools that allow users to change the case of words, including upper case, lower case, and
+                title case.<br><br>
+            </li>
+            <li>
+                <b>Text reverser:</b> A tool that allows users to easily reverse the order of the text they input.<br><br>
+            </li>
+            <li>
+                <b>Text randomizer:</b> A tool that shuffles the words or letters in the input text to create a randomized
+                output.<br><br>
+            </li>
+            <li>
+               <b> Remove duplicates:</b> A tool that helps users to remove any duplicate words or phrases from their text.<br><br>
+            </li>
+            <li>
+                <b>Text splitter:</b> A tool that allows users to split their text into separate parts based on specific
+                criteria, such as sentence boundaries or specific words.<br><br>
+            </li>
+            <li>
+                <b>Replace text:</b> A tool that allows users to easily replace specific words or phrases in their text with
+                other words or phrases.<br><br>
+            </li>
+            <li>
+                <b>Text analyzer:</b> A tool that provides users with insights into their text, including statistics such as
+                word and character counts, as well as more advanced analyses like readability scores and sentiment
+                analysis.<br><br>
+            </li>
+        </ol>
+        </p>
+    </div>
+   
+    <script>
+        let text = document.getElementById("text");
+
+        text.addEventListener('input', function () {
+            var t = this.value;
+            let char = t.length;
+            document.getElementById("char").innerHTML = char;
+
+            //    remove extra space from starting and ending
+            t = t.trim();
+
+            //split into array when space comes
+            let words = t.split(' ');
+
+            //cleanlist when element not empty in between 
+            let cleanList = words.filter(function (elem) {
+                return elem != "";
+            })
+
+            document.getElementById("word").innerHTML = cleanList.length;
         });
-       
-         let h=document.getElementById("h");
+
+
         //for background color
-        function changeBG(color){
-            document.body.style.backgroundColor=color;
+        let h = document.getElementById("h");
+        function changeBG(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+
+
+        //for sticky navbar
+        window.addEventListener('scroll', function () {
+            let navbar = document.getElementById("navbar");
+            if (window.pageYOffset >= 210) {
+                navbar.classList.add('sticky');
             }
-           
-        
-       
-       
+            else {
+                navbar.classList.remove('sticky')
+            }
+        })
+
+
     </script>
 </body>
+
 </html>
