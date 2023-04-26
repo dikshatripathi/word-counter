@@ -4,8 +4,7 @@ background-color:lightskyblue;
     padding: 0;
 }
 .container1{
-    margin-right: 55px;
-    margin-left: 10px;
+   
     text-align: center;
 }
 .container{
@@ -20,7 +19,7 @@ h1 {
 
 #text {
    /* margin: 1vh; */
-    width: 100%;
+    /* width: 100%; */
     padding: 20px;
     font-size: 20px;
     resize: none;
