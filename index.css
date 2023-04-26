@@ -22,3 +22,33 @@ font-size: 20px;
 font-weight: bold;
 text-shadow:  0 4px 10px rgb(29, 85, 141);
 }
+
+.btn{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    border:2px solid grey;
+    cursor: pointer;
+      
+}
+
+#color-switcher{
+    text-align: right;
+}
+
+#RosyBrown{
+background-color: #BC8F8F;
+}
+
+#teal{
+background-color: #008080;
+}
+
+#MediumSeaGreen{
+background-color: MediumSeaGreen;
+}
+
+#IndianRed{
+background-color:#CD5C5C;
+}
