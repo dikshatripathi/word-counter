@@ -10,30 +10,54 @@
 </head>
 
 <body>
+
+    <!-- Logo -->
     <div class="img">
         <img src="./img/Phoenix Mascot Logo.png" alt="" class="logo">
     </div>
+
+    <!-- NavBar -->
     <nav id="navbar">
         <li><a href="">Home</a></li>
         <li><a href="#about">About us</a></li>
         <li><a href="#feature">Features</a></li>
     </nav>
+
+    <!-- Color bar switches -->
     <div id="color-switcher">
         <span class="btn" id="RosyBrown" onclick="changeBG('#BC8F8F')"></span>
         <span class="btn" id="teal" onclick="changeBG('#008080')"></span>
         <span class="btn" id="MediumSeaGreen" onclick="changeBG('MediumSeaGreen')"></span>
         <span class="btn" id="IndianRed" onclick="changeBG('#CD5C5C')"></span>
     </div>
+
+    <!-- Text-Area -->
     <h1 id="h">Word Counter</h1>
     <div class="container1">
-        
-        <textarea name="word-counter" id="text" cols="20" rows="10"></textarea>
+        <textarea name="word-counter" id="text" cols="40" rows="16"></textarea>
+    </div>
+    <div class="btn-start">
+        <button id="uc" class="btn2 uc" onclick="funuc()">UpperCase</button>
+        <button id="lc" class="btn2 lc" onclick="funlc()">LowerCase</button>
+        <button id="cp" class=" btn2 cp" onclick="funcp()">Copy</button>
+        <button id="repl" class="btn2 repl" onclick="funrepl()">Replace</button>
+        <button id="rd" class="btn2 rd" onclick="funrd()">Remove Duplicates</button>
+        <button id="cc" class="btn2 cc" onclick="funcc()">CamelCase</button>
+        <button id="reset" class="btn2 reset" onclick="funreset()">Reset</button>
+    </div>
+    <div class="word-char">
         <p class="p">
             <span id="word">0</span>&nbspwords
             and
             <span id="char">0</span>&nbspcharacters
         </p>
     </div>
+       
+ 
+
+
+
+    <!-- About us -->
     <div class="container about" id="about">
         <h1>ABOUT US</h1>
         <p>Welcome to our comprehensive text manipulation website! Our platform is designed to provide you with a suite
@@ -62,94 +86,75 @@
             Thank you for choosing our website for all your text manipulation needs. We hope that our tools will help
             you to achieve your writing goals and take your work to the next level!</p>
     </div>
+
+
+    <!-- Features -->
     <div class="feature container" id="feature">
         <h1>FEATURES</h1>
         <p>
         <ol>
             <li>
-                <b>Word counter:</b> A tool that allows users to quickly and easily count the number of words in their text.<br><br>
+                <b>Word counter:</b> A tool that allows users to quickly and easily count the number of words in their
+                text.<br><br>
             </li>
             <li>
-                <b>Character counter:</b> A tool that allows users to count the number of characters in their text.<br><br>
+                <b>Character counter:</b> A tool that allows users to count the number of characters in their
+                text.<br><br>
             </li>
             <li>
-                <b>Syllable counter:</b> A tool that allows users to count the number of syllables in their text.<br><br>
+                <b>Syllable counter:</b> A tool that allows users to count the number of syllables in their
+                text.<br><br>
             </li>
             <li>
-                <b>Word changer:</b> Tools that allow users to change the case of words, including upper case, lower case, and
+                <b>Word changer:</b> Tools that allow users to change the case of words, including upper case, lower
+                case, and
                 title case.<br><br>
             </li>
             <li>
-                <b>Text reverser:</b> A tool that allows users to easily reverse the order of the text they input.<br><br>
+                <b>Text reverser:</b> A tool that allows users to easily reverse the order of the text they
+                input.<br><br>
             </li>
             <li>
-                <b>Text randomizer:</b> A tool that shuffles the words or letters in the input text to create a randomized
+                <b>Text randomizer:</b> A tool that shuffles the words or letters in the input text to create a
+                randomized
                 output.<br><br>
             </li>
             <li>
-               <b> Remove duplicates:</b> A tool that helps users to remove any duplicate words or phrases from their text.<br><br>
+                <b> Remove duplicates:</b> A tool that helps users to remove any duplicate words or phrases from their
+                text.<br><br>
             </li>
             <li>
                 <b>Text splitter:</b> A tool that allows users to split their text into separate parts based on specific
                 criteria, such as sentence boundaries or specific words.<br><br>
             </li>
             <li>
-                <b>Replace text:</b> A tool that allows users to easily replace specific words or phrases in their text with
+                <b>Replace text:</b> A tool that allows users to easily replace specific words or phrases in their text
+                with
                 other words or phrases.<br><br>
             </li>
             <li>
-                <b>Text analyzer:</b> A tool that provides users with insights into their text, including statistics such as
+                <b>Text analyzer:</b> A tool that provides users with insights into their text, including statistics
+                such as
                 word and character counts, as well as more advanced analyses like readability scores and sentiment
                 analysis.<br><br>
             </li>
         </ol>
         </p>
     </div>
-   
-    <script>
-        let text = document.getElementById("text");
-
-        text.addEventListener('input', function () {
-            var t = this.value;
-            let char = t.length;
-            document.getElementById("char").innerHTML = char;
-
-            //    remove extra space from starting and ending
-            t = t.trim();
-
-            //split into array when space comes
-            let words = t.split(' ');
-
-            //cleanlist when element not empty in between 
-            let cleanList = words.filter(function (elem) {
-                return elem != "";
-            })
-
-            document.getElementById("word").innerHTML = cleanList.length;
-        });
-
-
-        //for background color
-        let h = document.getElementById("h");
-        function changeBG(color) {
-            document.body.style.backgroundColor = color;
-        }
 
 
 
-        //for sticky navbar
-        window.addEventListener('scroll', function () {
-            let navbar = document.getElementById("navbar");
-            if (window.pageYOffset >= 210) {
-                navbar.classList.add('sticky');
-            }
-            else {
-                navbar.classList.remove('sticky')
-            }
-        })
 
 
-    </script>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -24,8 +24,65 @@ h1 {
     font-size: 20px;
     resize: none;
     border: 3px solid rgb(29, 85, 141);
+    
 
 }
+.btn-start{
+    text-align: center;
+   
+}
+
+.btn2{
+    margin-top:20px;
+    margin-right:4px;
+    padding:8px;
+    font-weight: bold;
+    font-size: 15px;
+    color:white;
+    box-shadow: 0 7px 6px rgb(48, 47, 46);
+    margin-bottom:10px;
+
+}
+
+.uc{
+    background-color: green;
+   
+}
+.lc{
+    background-color: blue;
+}
+.cp{
+    background-color: rgb(118, 118, 28);
+}
+.repl{
+background-color:rgb(11, 96, 68);
+}
+.rd{
+    background-color:rgb(115, 23, 208);
+}
+.cc{
+    background-color:rgb(77, 69, 69);
+}
+.reset{
+    background-color:rgb(110, 51, 9);
+}
+
+.btn2:hover{
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    padding:9px;
+}
+
+
+.word-char{
+  
+   
+    text-align: center;
+   
+   
+}
+
 
 .p {
     font-size: 20px;
@@ -103,6 +160,7 @@ h1 {
 }
 
 .about {
+    margin-top: 56px;
     font-size: 19px;
     background-color: darkslategrey;
     height: auto;
