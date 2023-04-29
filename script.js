@@ -42,113 +42,124 @@ window.addEventListener('scroll', function () {
 
 
 //button actions
+let text1 = document.getElementById("text");
 
-let text1 =document.getElementById("text");
+
+
 
 //UpperCase
-function funuc()
-{
-        let str=text1.value.toUpperCase();
-        text1.value=str;
-        console.log( (text1.value))
+function funuc() {
+    let str = text1.value.toUpperCase();
+    text1.value = str;
+    console.log((text1.value))
 }
 
+
+
 //LowerCase
-function funlc()
-{
-        let str=text1.value.toLowerCase();
-        text1.value=str;
-        console.log( (text1.value))
+function funlc() {
+    let str = text1.value.toLowerCase();
+    text1.value = str;
+    console.log((text1.value))
 }
+
+
 
 //CamelCase
 function funcc() {
     let str = text1.value;
     let words = str.split(' ');
-  
-
     for (let i = 1; i < words.length; i++) {
-      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
     }
-  text1.value=words
+    text1.value = words
     let camelCaseStr = words.join('');
     text1.value = camelCaseStr.charAt(0).toLowerCase() + camelCaseStr.slice(1);
-  }
+}
 
 
-  //reverse
-  function funrev() {
-    let str=text1.value;
+//reverse
+function funrev() {
+    let str = text1.value;
     let reversedStr = '';
-    
+
     for (let i = str.length - 1; i >= 0; i--) {
-      reversedStr += str[i];
+        reversedStr += str[i];
     }
-   text1.value=reversedStr;
-  }
+    text1.value = reversedStr;
+}
 
 
-  //remove duplicates
-  function funrd() {
-    let str=text1.value;
+//remove duplicates
+function funrd() {
+    let str = text1.value;
     let seen = {};
     let result = '';
-  
     for (let i = 0; i < str.length; i++) {
-      let char = str[i];
-      if (!seen[char]) {
-        seen[char] = true;
-        result += char;
-      }
+        let char = str[i];
+        if (!seen[char]) {
+            seen[char] = true;
+            result += char;
+        }
     }
-    text1.value=result
-  }
+    text1.value = result
+}
 
 
-  //replace
-  function funrepl(){
-    let inp=prompt("Please enter in the space seprated word and replaced word like (diksha neha)")
-    console.log(inp)
-    console.log(typeof inp)
-    let arr=inp.split(' ')
-    console.log(typeof arr)
-   let p= text1.value.replaceAll(arr[0] ,arr[1])
-   text1.value=p
-  }
 
-  //copy
-  function funcp()
-  {
-   navigator.clipboard.writeText(text1.value)
-  }
 
-  //reset
-  function funreset() {
-    let str='';
-    text1.value=str;
 
-  }
+//replace
+function funrepl() {
+    let inp = prompt("Please enter in the space seprated word and replaced word like (diksha neha)")
+    let arr = inp.split(' ')
+    let p = text1.value.replaceAll(arr[0], arr[1])
+    text1.value = p
+}
 
-  //character count
-  function funCount() {
+
+
+
+
+//copy
+function funcp() {
+    navigator.clipboard.writeText(text1.value)
+}
+
+
+
+
+
+//reset
+function funreset() {
+    let str = '';
+    text1.value = str;
+}
+
+
+
+
+
+
+//character frequency count
+function funCount() {
     let str = text1.value;
     let counts = {};
-  
+
     for (let i = 0; i < str.length; i++) {
-      let char = str[i];
-      if (counts[char]) {
-        counts[char]++;
-      } else {
-        counts[char] = 1;
-      }
+        let char = str[i];
+        if (counts[char]) {
+            counts[char]++;
+        } else {
+            counts[char] = 1;
+        }
     }
-  
+
     let message = "";
     for (let char in counts) {
-      message += char + ": " + counts[char] + "\n";
+        message += char + ": " + counts[char] + "\n";
     }
     alert(message);
-  }
-  
-  
-  
+}
+
+
