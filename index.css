@@ -89,6 +89,11 @@ h1 {
     background-color: rgb(110, 51, 9);
 }
 
+.rev{
+    background-color:rgb(237, 66, 66);
+}
+
+
 
 .btn2:hover 
 {
@@ -152,6 +157,7 @@ h1 {
 {
     background-color: #CD5C5C;
 }
+
 
 
 .img 
