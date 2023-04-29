@@ -41,14 +41,15 @@
         <textarea name="word-counter" id="text" cols="30" rows="20"></textarea>
     </div>
     <div class="btn-start">
-        <button id="uc" class="btn2 uc" onclick="funuc()">UpperCase</button>
-        <button id="lc" class="btn2 lc" onclick="funlc()">LowerCase</button>
-        <button id="cc" class="btn2 cc" onclick="funcc()">CamelCase</button>
-        <button id="rev" class="btn2 rev" onclick="funrev()">Reverse</button>
-        <button id="rd" class="btn2 rd" onclick="funrd()">Remove Duplicates</button>
-        <button id="repl" class="btn2 repl" onclick="funrepl()">Replace</button>
-        <button id="cp" class=" btn2 cp" onclick="funcp()">Copy</button>
-        <button id="reset" class=" btn2 reset" onclick="funreset()">Reset</button>
+        <button class="btn2 uc" onclick="funuc()">UpperCase</button>
+        <button class="btn2 lc" onclick="funlc()">LowerCase</button>
+        <button class="btn2 cc" onclick="funcc()">CamelCase</button>
+        <button class="btn2 rev" onclick="funrev()">Reverse</button>
+        <button class="btn2 rd" onclick="funrd()">Remove Duplicates</button>
+        <button class="btn2 repl" onclick="funrepl()">Replace</button>
+        <button class=" btn2 cp" onclick="funcp()">Copy</button>
+        <button class=" btn2 reset" onclick="funreset()">Reset</button>
+        <button class=" btn2 count" onclick="funCount()">Text Count</button>
 
     </div>
     <div class="word-char">
@@ -58,8 +59,8 @@
             <span id="char">0</span>&nbspcharacters
         </p>
     </div>
-       
- 
+
+
     <!-- About us -->
     <div class="container about" id="about">
         <h1>ABOUT US</h1>
@@ -105,39 +106,42 @@
                 text.<br><br>
             </li>
             <li>
-                <b>Upper Case:</b> A tool that allows users to change the text into Upper case 
-                text.<br><br>
+                <b>Upper Case:</b>This button converts all the text in the text area to uppercase. This can be useful
+                for emphasizing text or making it stand out.<br><br>
             </li>
             <li>
-                <b>Lower Case:</b> A tool that allows users to change the text into Lower case text.<br><br>
+                <b>Lower Case:</b>This button converts all the text in the text area to lowercase. This can be useful
+                for making text easier to read or for creating a consistent look and feel.<br><br>
             </li>
             <li>
-                <b>Text reverser:</b> A tool that allows users to easily reverse the order of the text they
-                input.<br><br>
+                <b>Camel Case:</b>This button converts the text in the text area to camel case. Camel case is a naming
+                convention where the first letter of each word is capitalized, except for the first word. This can be
+                useful for creating variable or function names in programming.<br><br>
             </li>
             <li>
-                <b>Text randomizer:</b> A tool that shuffles the words or letters in the input text to create a
-                randomized
-                output.<br><br>
+                <b>Text reverse:</b>This button reverses the order of the characters in the text area. This can be
+                useful for creating a different perspective on the text or for decoding messages.<br><br>
             </li>
             <li>
-                <b> Remove duplicates:</b> A tool that helps users to remove any duplicate words or phrases from their
-                text.<br><br>
+                <b> Remove duplicates:</b>This button removes duplicate characters from the text area. This can be
+                useful for cleaning up text and removing unnecessary characters.<br><br>
             </li>
             <li>
-                <b>Text splitter:</b> A tool that allows users to split their text into separate parts based on specific
-                criteria, such as sentence boundaries or specific words.<br><br>
+                <b>Text replace:</b> This button replaces specified characters or phrases with other characters or
+                phrases. This can be useful for making text more readable or for correcting errors.<br><br>
             </li>
             <li>
-                <b>Replace text:</b> A tool that allows users to easily replace specific words or phrases in their text
-                with
-                other words or phrases.<br><br>
+                <b>Copy Text:</b>This button copies the text in the text area to the clipboard. This can be useful for
+                easily transferring text to other applications or documents.<br><br>
             </li>
             <li>
-                <b>Text analyzer:</b> A tool that provides users with insights into their text, including statistics
-                such as
-                word and character counts, as well as more advanced analyses like readability scores and sentiment
-                analysis.<br><br>
+                <b>Reset:</b>This button clears the text area and resets it to its default state. This can be useful for
+                starting over or for removing any changes that have been made to the text.<br><br>
+            </li>
+            <li>
+                <b>Text Count:</b>This button counts the number of characters, words, and sentences in the text area and
+                displays the counts in an alert message. This can be useful for tracking the length of a document or for
+                ensuring that text meets certain requirements, such as minimum or maximum length.<br><br>
             </li>
         </ol>
         </p>

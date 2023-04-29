@@ -128,5 +128,27 @@ function funcc() {
     text1.value=str;
 
   }
+
+  //character count
+  function funCount() {
+    let str = text1.value;
+    let counts = {};
+  
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      if (counts[char]) {
+        counts[char]++;
+      } else {
+        counts[char] = 1;
+      }
+    }
+  
+    let message = "";
+    for (let char in counts) {
+      message += char + ": " + counts[char] + "\n";
+    }
+    alert(message);
+  }
+  
   
   
